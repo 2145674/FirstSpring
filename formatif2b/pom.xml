@@ -11,9 +11,14 @@
 	<groupId>a23.climoilou.mono2.formatifs</groupId>
 	<artifactId>formatif2b</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>formatif2b</name>
+    <packaging>pom</packaging>
+    <name>formatif2b</name>
 	<description>Demo project for Spring Boot</description>
-	<properties>
+    <modules>
+        <module>controleur</module>
+		<module>modele</module>
+	</modules>
+    <properties>
 		<java.version>17</java.version>
 	</properties>
 	<dependencies>

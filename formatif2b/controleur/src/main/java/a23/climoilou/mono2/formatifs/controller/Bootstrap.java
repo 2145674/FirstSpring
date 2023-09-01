@@ -1,5 +1,6 @@
-package a23.climoilou.mono2.formatifs.formatif2b;
+package a23.climoilou.mono2.formatifs.controller;
 
+import a23.climoilou.mono2.formatifs.model.Cirque;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.ApplicationContext;
@@ -24,8 +25,11 @@ public class Bootstrap implements CommandLineRunner {
 //
 //        Jongleur jongleur = (Jongleur) context.getBean(Jongleur.class);
 //        System.out.println(jongleur.performe(LocalDateTime.now()));
+//
+//        ArtisteI artisteI = context.getBean(ArtisteI.class);
+//        System.out.println(artisteI.performe(LocalDateTime.now()));
 
-        ArtisteI artisteI = context.getBean(ArtisteI.class);
-        System.out.println(artisteI.performe(LocalDateTime.now()));
+        Cirque cirque= context.getBean(Cirque.class);
+        System.out.println(cirque.performeAll());
     }
 }
