@@ -7,14 +7,14 @@ import org.springframework.stereotype.Component;
 
 import java.time.LocalDateTime;
 
-@Component
-public class ClownPertubateur extends Clown{
+//@Component
+public class ClownPertubateur extends Clown implements ArtisteI{
     private  JongleurConcentre jongleurConcentre;
-    @Autowired
+    //@Autowired
     public void setJongleurConcentre(@Lazy JongleurConcentre jongleurConcentre) {
         this.jongleurConcentre = jongleurConcentre;
     }
-
+    @Override
     public String performe(LocalDateTime time){
         return "Je dérange " + jongleurConcentre.toString() +
                 " parce que " +  super.performe(time);

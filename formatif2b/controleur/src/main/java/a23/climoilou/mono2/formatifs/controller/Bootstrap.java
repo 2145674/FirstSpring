@@ -4,6 +4,7 @@ import a23.climoilou.mono2.formatifs.model.Cirque;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.stereotype.Component;
 
 import java.time.LocalDateTime;
@@ -12,6 +13,7 @@ import java.time.LocalDateTime;
 @Component //indique que c'est un bean et donc qu'on peut lui mettre des annotations de Bean
 public class Bootstrap implements CommandLineRunner {
     private ApplicationContext context;
+    private ApplicationEventPublisher eventPublisher;
 
     @Autowired  //Annotation de Bean
     public void setContext(ApplicationContext context) {  //L'injection se fait par un setter
@@ -31,5 +33,8 @@ public class Bootstrap implements CommandLineRunner {
 
         Cirque cirque= context.getBean(Cirque.class);
         System.out.println(cirque.performeAll());
+
+        //eventPublisher.publishEvent("allo event");
+        //eventPublisher.publishEvent(234);
     }
 }

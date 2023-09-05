@@ -57,11 +57,11 @@ public class ApplicationFX extends Application {
         secondSatge.show();
 
         //troisieme fenetre
-//        FxControllerAndView<SpringFXController2, AnchorPane> controllerAndView2 = fxWeaver.load(SpringFXController2.class);
-//        Parent root2 = controllerAndView2.getView().get();
-//
-//        Stage secondSatge = new Stage();
-//        secondSatge.setScene(new Scene(root2));
-//        secondSatge.show();
+        FxControllerAndView<SpringFXController, AnchorPane> controllerAndView3 = fxWeaver.load(SpringFXController.class);
+        Parent root3 = controllerAndView3.getView().get();
+
+        Stage secondSatge1 = new Stage();
+        secondSatge1.setScene(new Scene(root3));
+        secondSatge1.show();
     }
 }
